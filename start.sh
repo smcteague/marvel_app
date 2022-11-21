@@ -1,1 +1,1 @@
-gunicorn "marvel_app:app"
+gunicorn "marvel_characters:app"

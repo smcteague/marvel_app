@@ -12,3 +12,6 @@ class Config():
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEPLOY_DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
+    MARVEL_PUBLIC_KEY = os.environ.get('MARVEL_PUBLIC_KEY')
+    MARVEL_PRIVATE_KEY = os.environ.get('MARVEL_PRIVATE_KEY') or 'Sorry you are not allowed in here!'
+

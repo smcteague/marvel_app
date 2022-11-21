@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(236,29,36);
+    color: white;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item.main{ 
+    font-size: 200%;
+}
+
+.nav-item a:link{
+    color: white;
+}
+
+.nav-item a:visited{
+    color: white;
+}
+
+.nav-item a:hover{
+    color: yellow;
+}
+
+.card{
+    color: black;
+}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class='row card-group'>
+        {% for char in random_chars %}
+            {% for k, v in char.items() %}
+                {% for result in v['results'] %}
+                    <div class="card">
+                        <img class="card-img-top" src="{{ result['thumbnail']['path'] }}.{{ result['thumbnail']['extension'] }}" alt="Marvel character {{ result['name'] }} image" >
+                        <div class="card-body">
+                            <h5 class="card-title">{{ result['name'] }}</h5>
+                            <p class="card-text">Appeared in {{ result['comics']['available'] }} available comics.</p>
+                            <p class="card-text">Appeared in {{ result['series']['available'] }} available series.</p>
+                            <p class="card-text">Appeared in {{ result['stories']['available'] }} available stories.</p>
+                            <p class="card-text">Appeared in {{ result['events']['available'] }} available events.</p>
+                            <p class="card-text"><a href="{{ result['urls'][0]['url'] }}" target="_blank">More Detail</a></p>
+                            <p><a href="#" class="btn btn-primary">Go somewhere</a></p>
+                            <p class="card-text-attribution">{{ char['attributionText'] }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+    <div>
+</div>
+
+
+{% endblock content %}
